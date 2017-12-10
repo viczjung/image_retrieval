@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Image Retrieval</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta Http-Equiv="Cache" content="no-cache">
+<meta Http-Equiv="Pragma-Control" content="no-cache">
+<meta Http-Equiv="Cache-directive" Content="no-cache">
+<meta Http-Equiv="Pragma-directive" Content="no-cache">
+<meta Http-Equiv="Cache-Control" Content="no-cache">
+<meta Http-Equiv="Pragma" Content="no-cache">
+<meta Http-Equiv="Expires" Content="0">
+<meta Http-Equiv="Pragma-directive: no-cache">
+<meta Http-Equiv="Cache-directive: no-cache">
+
+<!-- Bootstrap styles -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Generic page styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- blueimp Gallery styles -->
+<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="css/jquery.fileupload.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- CSS adjustments for browsers with JavaScript disabled -->
+<link rel="stylesheet" href="css/jquery.fileupload-noscript.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css">
+<link rel="stylesheet" href="css/imgareaselect-default.css" />
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;width: 50%}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;width: 50%}
+.tg .tg-wxgh{text-decoration:underline;vertical-align:top;width: 50%}
+.tg .tg-yw4l{vertical-align:top; width: 50%}
+.title{font-size: 2.4em}
+.clear-both{clear: both}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+<script type="text/javascript" src="js/main.js"> </script>
+<script type="text/javascript" src="js/jquery.imgareaselect.pack.js"></script>
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Trang chủ</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/banner.png" alt="logo" class="img-responsive col-sm-4"/>
+    <h1 class="title pull-right col-sm-8">Bài thu hoạch môn tìm kiếm thông tin thị giác</h1>
+    <ul class="nav nav-tabs clear-both">
+    	<li id="tab1" class="active"><a data-toggle="tab" href="#object">Kết quả</a></li>
+    </ul>
+
+	<div class="tg">
+		<div class="tab-content">
+			<div class="tab-pane active" id="object">
+				<div>
+					<label>Ảnh query</label><br>
+					<img id="image_query" src="test/test.jpg"/><br>
+					<label>Ảnh kết quả</label><br>
+					1./ Ảnh 1: <br>
+					<img id="image_1" src="results/1.jpg"/><br>
+					2./ Ảnh 2: <br>
+					<img id="image_2" src="results/2.jpg"/><br>
+					3./ Ảnh 3: <br>
+					<img id="image_3" src="results/3.jpg"/><br>
+					4./ Ảnh 4: <br>
+					<img id="image_4" src="results/4.jpg"/><br>
+					5./ Ảnh 5: <br>
+					<img id="image_5" src="results/5.jpg"/><br>
+					6./ Ảnh 6: <br>
+					<img id="image_6" src="results/6.jpg"/><br>
+					7./ Ảnh 7: <br>
+					<img id="image_7" src="results/7.jpg"/><br>
+					8./ Ảnh 8: <br>
+					<img id="image_8" src="results/8.jpg"/><br>
+					9./ Ảnh 9: <br>
+					<img id="image_9" src="results/9.jpg"/><br>
+					10./ Ảnh 10: <br>
+					<img id="image_10" src="results/10.jpg"/><br>
+					11./ Ảnh 11: <br>
+					<img id="image_11" src="results/11.jpg"/><br>
+					12./ Ảnh 12: <br>
+					<img id="image_12" src="results/12.jpg"/><br>
+					13./ Ảnh 13: <br>
+					<img id="image_13" src="results/13.jpg"/><br>
+					14./ Ảnh 14: <br>
+					<img id="image_14" src="results/14.jpg"/><br>
+					15./ Ảnh 15: <br>
+					<img id="image_15" src="results/15.jpg"/><br>
+					16./ Ảnh 16: <br>
+					<img id="image_16" src="results/16.jpg"/><br>
+					17./ Ảnh 17: <br>
+					<img id="image_17" src="results/17.jpg"/><br>
+					18./ Ảnh 18: <br>
+					<img id="image_18" src="results/18.jpg"/><br>
+					19./ Ảnh 19: <br>
+					<img id="image_19" src="results/19.jpg"/><br>
+					20./ Ảnh 20: <br>
+					<img id="image_20" src="results/20.jpg"/><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

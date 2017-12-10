@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Image Retrieval</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap styles -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Generic page styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- blueimp Gallery styles -->
+<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="css/jquery.fileupload.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- CSS adjustments for browsers with JavaScript disabled -->
+<link rel="stylesheet" href="css/jquery.fileupload-noscript.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css">
+<link rel="stylesheet" href="css/imgareaselect-default.css" />
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;width: 50%}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;width: 50%}
+.tg .tg-wxgh{text-decoration:underline;vertical-align:top;width: 50%}
+.tg .tg-yw4l{vertical-align:top; width: 50%}
+.title{font-size: 2.4em}
+.clear-both{clear: both}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+<script type="text/javascript" src="js/main.js"> </script>
+<script type="text/javascript" src="js/jquery.imgareaselect.pack.js"></script>
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Trang chủ</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <img src="img/banner.png" alt="logo" class="img-responsive col-sm-4"/>
+    <h1 class="title pull-right col-sm-8">Bài thu hoạch môn tìm kiếm thông tin thị giác</h1>
+    <ul class="nav nav-tabs clear-both">
+    	<li id="tab1" class="active"><a data-toggle="tab" href="#object">Tìm kiếm ảnh</a></li>
+    	<li id="tab2"><a data-toggle="tab" href="#info">Giới thiệu</a></li>
+    </ul>
+
+	<div class="tg">
+		<div class="tab-content">
+			<div class="tab-pane row" id="info">
+				<div class="col-xs-12">
+					Đây là ứng dụng demo về môn học tìm kiếm thông tin thị giác.<br>
+					Ứng dụng được xây dựng từ những kiến thức tiếp thu được trong quá trình học<br>
+					Đây là ứng dụng search với bộ dữ liệu là oxford building 5K (Tuy nhiên ở đây HV chỉ thực hiện với 845 ảnh)<br>
+					Dữ liệu ảnh sử dụng được get từ https://github.com/nvtiep/Instance-Search/tree/master/oxford<br>
+					Bạn sẽ chọn một hình ảnh muốn search và sẽ nhận về kết quả là các image phù hợp với hình query<br>
+					<br>
+					<br>
+					<br>
+					Giáo viên hướng dẫn: TS. Ngô Đức Thành<br>
+					Học viên viên thực hiện: Nguyễn Trung Đức<br>
+					MSSV: 13520211<br>
+					Khóa 8 đợt 2<br>
+					Thực hiện tháng 12/2017<br>
+					
+
+				</div>
+			</div>
+			<div class="tab-pane active" id="object">
+				<div>
+					<div>
+						<img id="image_preview" src="#" alt="your image"/>
+					</div>
+					<div class="tg-yw4l" width="80%" valign="top">
+						<form id="submit_form">  
+							<div class="form-group">  
+								<label>Chọn hình ảnh </label>                     
+								<input type="file" name="fileToUpload" id="fileToUpload" class="filestyle" data-buttonName="btn-success" data-buttonBefore="true"/>  							 
+								 <span class="help-block">Hệ thông cho phép upload các hình ảnh với định dạng jpg</span>
+							 </div>  					
+							<input type="submit" name="upload_button" class="btn btn-primary" value="Search" />  		 
+						</form>	
+					</div>
+					<br>
+						<div id="waiting"></div>
+					<br>
+
+					<br>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Lưu ý</h3>
+						</div>
+						<div class="panel-body">
+							<ul>
+							<li>Kích thước của hình ảnh tối đa có thể upload là <strong>10 mb</strong> .</li>
+							<li>Chỉ support các file ảnh với định dạng  (<strong>JPG</strong>) </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
